@@ -1,5 +1,6 @@
 import mysql.connector
 
+
 #Connection to the DB hosted over loval server
 db_conn = mysql.connector.connect(host='localhost',database='test_db',user='root',password='root')
 
@@ -33,10 +34,8 @@ order_price = 0
 #Iterates over the tables for order_price
 for row in rows:
     order_price = order_price + row[3]
-
-print("Total Order Price: INR",order_price)
-
-
+    print("Total Order Price: INR",order_price)
 
 #Close the SQL Connection
 db_conn.close()
+
